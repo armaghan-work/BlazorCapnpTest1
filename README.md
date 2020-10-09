@@ -1,2 +1,2 @@
-# Blazor-monica-test
-A Producer/Consumer test version of Blazor with ZMQ for Monica
+# Blazor-Capnp test-interface 4 Monica/Zalf
+A test version to get the services (weather,soil ,...) by Capnp and run Monica
