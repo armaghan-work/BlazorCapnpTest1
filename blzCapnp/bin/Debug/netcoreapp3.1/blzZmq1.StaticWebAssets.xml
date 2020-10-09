@@ -1,0 +1,5 @@
+﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="_content/BlazorInputFile" Path="C:\Users\armaghan\.nuget\packages\blazorinputfile\0.1.0-preview-00002\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/BlazorPro.Spinkit" Path="C:\Users\armaghan\.nuget\packages\blazorpro.spinkit\1.2.0\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/Radzen.Blazor" Path="C:\Users\armaghan\.nuget\packages\radzen.blazor\2.8.1\build\..\staticwebassets\" />
+</StaticWebAssets>

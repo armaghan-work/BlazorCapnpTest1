@@ -1,0 +1,67 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <RazorLangVersion>3.0</RazorLangVersion>
+    <UserSecretsId>6b6a1579-9261-4385-9f6a-40b12fa3d5a8</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Data\bkp\climate-min.csv" />
+    <None Remove="Data\climate-min.csv" />
+    <None Remove="Data\climate.csv" />
+    <None Remove="Data\climate_comma.csv" />
+    <None Remove="Data\dwd_row-400_col-300.csv" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Data\bkp\climate-min.csv">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Data\climate-min.csv">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Data\climate.csv">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Data\climate_comma.csv">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Data\dwd_row-400_col-300.csv">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Data\bkp\climate-min.csv" />
+    <None Include="wwwroot\Data\climate-min.csv" />
+    <None Include="wwwroot\Data\climate.csv" />
+    <None Include="wwwroot\Data\climate_comma.csv" />
+    <None Include="wwwroot\Data\dwd_row-400_col-300.csv" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BlazorInputFile" Version="0.2.0" />
+    <PackageReference Include="BlazorPro.Spinkit" Version="1.2.0" />
+    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.7" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.2.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="3.2.0-rc1.20223.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Build" Version="3.2.0-rc1.20223.4" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="3.2.0-rc1.20223.4" PrivateAssets="all" />
+    <PackageReference Include="NetMQ" Version="4.0.0.207" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Radzen.Blazor" Version="2.8.4" />
+    <PackageReference Include="System.Net.Http.Json" Version="3.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Upload\" />
+    <Folder Include="wwwroot\export\" />
+  </ItemGroup>
+
+</Project>

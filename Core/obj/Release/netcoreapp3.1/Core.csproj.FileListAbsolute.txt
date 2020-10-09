@@ -1,0 +1,9 @@
+C:\Users\armaghan\source\repos\blzZmq1\Core\bin\Release\netcoreapp3.1\Core.deps.json
+C:\Users\armaghan\source\repos\blzZmq1\Core\bin\Release\netcoreapp3.1\Core.dll
+C:\Users\armaghan\source\repos\blzZmq1\Core\bin\Release\netcoreapp3.1\Core.pdb
+C:\Users\armaghan\source\repos\blzZmq1\Core\obj\Release\netcoreapp3.1\Core.csprojAssemblyReference.cache
+C:\Users\armaghan\source\repos\blzZmq1\Core\obj\Release\netcoreapp3.1\Core.AssemblyInfoInputs.cache
+C:\Users\armaghan\source\repos\blzZmq1\Core\obj\Release\netcoreapp3.1\Core.AssemblyInfo.cs
+C:\Users\armaghan\source\repos\blzZmq1\Core\obj\Release\netcoreapp3.1\Core.csproj.CoreCompileInputs.cache
+C:\Users\armaghan\source\repos\blzZmq1\Core\obj\Release\netcoreapp3.1\Core.dll
+C:\Users\armaghan\source\repos\blzZmq1\Core\obj\Release\netcoreapp3.1\Core.pdb

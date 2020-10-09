@@ -1,0 +1,64 @@
+﻿@page "/zmqconsumer"
+@using Web.Services
+@using NetMQ
+@using System.IO
+
+@inject Services.ZmqConsumer RunConsumer
+@inject AppData AppData
+@inject NavigationManager NavigationManager
+
+<h3>Recive ENV via ZMQ</h3>
+
+<button class="btn btn-primary m-2" @onclick="GetMassage">Recieve message from server and put in CSV</button>
+@if (gotAnswer)
+{
+    <p><a href="@CsvLink">Download CSV file</a></p>
+}
+else
+{
+    <p>@CsvLink</p>
+}
+<p class="fixwidth">@answer</p>
+
+
+@code {
+
+    Boolean gotAnswer = false;
+    public string answer { get; set; } = " ";
+    private string CsvLink { get; set; } = " ";
+
+    async Task GetMassage() // call ZmqProducer calss
+    {
+
+        //RunConsumer();
+
+        using (var consumer = new PullSocket())
+        //using (var producer = new RequestSocket())
+        {
+            //consumer.Connect("tcp://localhost:7777");
+            consumer.Connect(AppData.ServerPullAddress + ":" + AppData.ServerPullPort);
+            answer = consumer.ReceiveFrameString();
+
+            System.Threading.Thread.Sleep(2000);
+            gotAnswer = true;
+            consumer.Disconnect(AppData.ServerPullAddress + ":" + AppData.ServerPullPort);
+
+            // create path
+            string filePath = "wwwroot/export/" + DateTime.Now.ToString("yyyyMMdd_hhmmss");
+
+            //write the answer into a file
+            string jsonFile = (filePath + ".json");
+            if (!File.Exists(jsonFile))
+                File.WriteAllText(jsonFile, answer);
+
+            // call runConsumer Method(). get ths csv path, remove wwwroot and use the link in razor section
+            CsvLink = Services.ZmqConsumer.RunConsumer(answer, filePath);
+            CsvLink = CsvLink.Substring(CsvLink.IndexOf("/"));
+            System.Threading.Thread.Sleep(1000);
+            NavigationManager.NavigateTo("/monicaCharts/monicaChart");
+
+        }
+
+    }
+
+}

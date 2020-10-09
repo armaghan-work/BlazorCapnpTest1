@@ -1,0 +1,52 @@
+﻿<div class="top-row pl-4 navbar navbar-dark">
+    <a class="navbar-brand" href="">WebAssembly Version</a>
+    <button class="navbar-toggler" @onclick="ToggleNavMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</div>
+
+<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+    <ul>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> Home
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="uploadData" Match="NavLinkMatch.All">
+                <span class="oi oi-cloud-upload" aria-hidden="true"></span> Upload Data (Producer)
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="zmqconsumer" Match="NavLinkMatch.All">
+                <span class="oi oi-cloud-download" aria-hidden="true"></span> ZMQ Consumer
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="monicaCharts/monicaChart" Match="NavLinkMatch.All">
+                <span class="oi oi-code" aria-hidden="true"></span> Rsults History
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="setting" Match="NavLinkMatch.All">
+                <span class="oi oi-cog" aria-hidden="true"></span> Settings
+            </NavLink>
+        </li>
+        <li class="nav-item px-3" style="border-top:1px solid #808080;">
+            <NavLink class="nav-link" href="uploadData/monicaParametersTree" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> File Tree
+            </NavLink>
+        </li>
+    </ul>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

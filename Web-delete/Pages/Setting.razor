@@ -1,0 +1,44 @@
+﻿@page "/setting"
+@inject Services.AppData AppData
+@using Web.Services
+
+<h3>Setting</h3>
+
+<label for="basic-url">Your ZeroMQ server Address</label>
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon3">Server Push Address:</span>
+    </div>
+    <input type="text" class="form-control" aria-describedby="basic-addon3" @bind="AppData.ServerPushAddress">
+</div>
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon3">Server Push Port:</span>
+    </div>
+    <input type="number" class="form-control" aria-describedby="basic-addon3" @bind="AppData.ServerPushPort">
+</div>
+
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon3">Server Pull Address:</span>
+    </div>
+    <input type="text" class="form-control" aria-describedby="basic-addon3" @bind="AppData.ServerPullAddress">
+</div>
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon3">Server Pull Port:</span>
+    </div>
+    <input type="number" class="form-control" aria-describedby="basic-addon3" @bind="AppData.ServerPullPort">
+</div>
+
+
+
+@code {
+
+
+    protected override void OnInitialized()
+    {
+
+    }
+
+}

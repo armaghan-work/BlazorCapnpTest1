@@ -1,0 +1,291 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\armaghan\\source\\repos\\blzCapnp\\blzZmq1\\blzZmq1.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\armaghan\\source\\repos\\blzCapnp\\Application\\Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\armaghan\\source\\repos\\blzCapnp\\Application\\Application.csproj",
+        "projectName": "Application",
+        "projectPath": "C:\\Users\\armaghan\\source\\repos\\blzCapnp\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\armaghan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\armaghan\\source\\repos\\blzCapnp\\Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\armaghan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\armaghan\\source\\repos\\blzCapnp\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\armaghan\\source\\repos\\blzCapnp\\Core\\Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\armaghan\\source\\repos\\blzCapnp\\blzZmq1\\blzZmq1.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\armaghan\\source\\repos\\blzCapnp\\blzZmq1\\blzZmq1.csproj",
+        "projectName": "blzZmq1",
+        "projectPath": "C:\\Users\\armaghan\\source\\repos\\blzCapnp\\blzZmq1\\blzZmq1.csproj",
+        "packagesPath": "C:\\Users\\armaghan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\armaghan\\source\\repos\\blzCapnp\\blzZmq1\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\armaghan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\armaghan\\source\\repos\\blzCapnp\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\armaghan\\source\\repos\\blzCapnp\\Application\\Application.csproj"
+              },
+              "C:\\Users\\armaghan\\source\\repos\\blzCapnp\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\armaghan\\source\\repos\\blzCapnp\\Core\\Core.csproj"
+              },
+              "C:\\Users\\armaghan\\source\\repos\\mas-infrastructure\\capnproto_schemas\\capnproto_schemas_csharp.csproj": {
+                "projectPath": "C:\\Users\\armaghan\\source\\repos\\mas-infrastructure\\capnproto_schemas\\capnproto_schemas_csharp.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "BlazorInputFile": {
+              "target": "Package",
+              "version": "[0.1.0-preview-00002, )"
+            },
+            "BlazorPro.Spinkit": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "Blazored.LocalStorage": {
+              "target": "Package",
+              "version": "[2.1.6, )"
+            },
+            "Capnp.Net.Runtime": {
+              "target": "Package",
+              "version": "[1.3.118, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "NetMQ": {
+              "target": "Package",
+              "version": "[4.0.0.207, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "Octokit": {
+              "target": "Package",
+              "version": "[0.47.0, )"
+            },
+            "Radzen.Blazor": {
+              "target": "Package",
+              "version": "[2.8.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\armaghan\\source\\repos\\blzCapnp\\Core\\Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\armaghan\\source\\repos\\blzCapnp\\Core\\Core.csproj",
+        "projectName": "Core",
+        "projectPath": "C:\\Users\\armaghan\\source\\repos\\blzCapnp\\Core\\Core.csproj",
+        "packagesPath": "C:\\Users\\armaghan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\armaghan\\source\\repos\\blzCapnp\\Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\armaghan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\armaghan\\source\\repos\\mas-infrastructure\\capnproto_schemas\\capnproto_schemas_csharp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\armaghan\\source\\repos\\mas-infrastructure\\capnproto_schemas\\capnproto_schemas_csharp.csproj",
+        "projectName": "capnproto_schemas_csharp",
+        "projectPath": "C:\\Users\\armaghan\\source\\repos\\mas-infrastructure\\capnproto_schemas\\capnproto_schemas_csharp.csproj",
+        "packagesPath": "C:\\Users\\armaghan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\armaghan\\source\\repos\\mas-infrastructure\\capnproto_schemas\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\armaghan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Capnp.Net.Runtime": {
+              "target": "Package",
+              "version": "[1.3.118, )"
+            },
+            "CapnpC.CSharp.MsBuild.Generation": {
+              "target": "Package",
+              "version": "[1.3.118, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

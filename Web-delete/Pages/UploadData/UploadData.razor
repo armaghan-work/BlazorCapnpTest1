@@ -1,0 +1,118 @@
+﻿@page "/uploadData"
+@* Usings *@
+@using Web.Services
+@using System.IO
+@using BlazorInputFile
+
+@* Injects *@
+@inject IFileUpload FileUpload
+@inject IMonicaZmqService MonicaZmqService
+
+<h1>Upload data</h1>
+<h3>Select your files and upload to the server</h3>
+
+<div class="drag-drop-zone">
+    <InputFile multiple OnChange="ViewFile" />
+    @status
+</div>
+
+@if (_files != null)
+{
+    foreach (var file in _files)
+    {
+        <div class="file-row">
+            <h2>@file.File.Name</h2>
+            <div> <b>size</b> @file.File.Size</div>
+            <button class="btn btn-danger btn-sm" type="button" disabled="@file.IsUploaded" @onclick="(() => RemoveFile(file))">Remove</button>
+        </div>
+    }
+}
+<hr />
+<button class="btn btn-primary" @onclick="HandleFiles">Send to server</button>
+
+@if (!string.IsNullOrWhiteSpace(SendToServerStatus))
+{
+    <div class="alert alert-success" role="alert">
+        Data has been sent to server.
+    </div>
+}
+
+@code {
+    const string DefaultStatus = "Drop a text file here to view it, or click to choose a file";
+    const int MaxFileSize = 5 * 1024 * 1024; // 5MB
+    string status = DefaultStatus;
+
+    private List<UploadedFilesModel> _files = new List<UploadedFilesModel>();
+    private bool IsDataSent = false;
+    private string SendToServerStatus = string.Empty;
+
+    async Task ViewFile(IFileListEntry[] files)
+    {
+        SendToServerStatus = string.Empty;
+
+        if (files.Length == 0)
+        {
+            return;
+        }
+        else
+        {
+            for (int i = 0; i < files.Length; i++)
+            {
+                if (files[i].Size > MaxFileSize)
+                {
+                    status = $"That's too big. Max size: {MaxFileSize} bytes.";
+                    return;
+                }
+            }
+
+            status = "Loading...";
+
+            for (int i = 0; i < files.Length; i++)
+            {
+                if (!_files.Any(file => file.File.Name == files[i].Name && file.File.Size == files[i].Size))
+                    _files.Add(new UploadedFilesModel() { File = files[i] });
+            }
+
+            status = DefaultStatus;
+        }
+    }
+
+    private void RemoveFile(UploadedFilesModel file)
+    {
+        _files.Remove(file);
+    }
+
+    private async Task HandleFiles()
+    {
+        var filePathes = new List<string>();
+        FileUpload.DeleteExistingFiles();
+
+        foreach (var file in _files)
+        {
+            var filePath = await FileUpload.UploadAsync(file.File);
+            filePathes.Add(filePath);
+        }
+
+        var producer = new ZmqProducer();
+        var result = await producer.RunProducerAsync(filePathes);
+
+        IsDataSent = MonicaZmqService.Send(result);
+
+        if (IsDataSent)
+        {
+            _files = new List<UploadedFilesModel>();
+        }
+    }
+
+    class UploadedFilesModel
+    {
+        public UploadedFilesModel()
+        {
+            IsUploaded = false;
+        }
+
+        public IFileListEntry File { get; set; }
+
+        public bool IsUploaded { get; set; }
+    }
+}
